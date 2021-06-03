@@ -1,4 +1,2 @@
-<div class="container">
-    <h1 class=''>Bienvenido</h1>
-    <button class='btn btn-outline-danger'>danger</button>
-</div>
+<h1>Bienvenido, <%= current_user.email %></h1>
+<%= link_to "Inicio", root_path %>
