@@ -1,4 +1,5 @@
 class Article < ApplicationRecord
+    mount_uploader :picture, PictureUploader
     has_rich_text :content
     belongs_to :user
     has_many :has_categories

@@ -1,5 +1,8 @@
-<div class="card padding margin-top">
-    <h3 class='text-uppercase'><%= article.title %></h4>
-    <p class='text-secondary'><%= article.created_at %></p>
-    <%=link_to 'Ver mas', article %>
+<div class="col-sm-12 col-md-6 col-lg-3">
+    <div class="card padding margin-top">
+        <%= image_tag article.picture.thumb.url, class: 'figure-img img-fluid rounded'%>
+        <h3 class='text-uppercase'><%= article.title %></h4>
+        <p class='text-secondary'><%= article.created_at %></p>
+        <%=link_to 'Ver mas', article %>
+    </div>
 </div>
