@@ -10,6 +10,18 @@
     </div>
 
     <div>
+        <%= f.label :category_elements %>
+        <div class="row">
+            <% @categories.each do |category|%>
+                <label class='col-6 col-sm-4'>
+                <%= f.check_box :category_elements, {multiple: true, class: 'form-check-input'}, category.id, nil %>
+                <%= category.title %>
+                </label>
+            <% end %>
+        </div>
+    </div>
+
+    <div>
         <%= f.submit "Guardar", class: 'mt-3 btn btn-outline-primary'%>
     </div>
 <% end %>

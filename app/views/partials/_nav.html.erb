@@ -13,8 +13,12 @@
 
     <% if user_signed_in? %>
         <li class="nav-item">
+            <%= link_to "mi perfil", perfil_path, method: :delete, class: 'nav-link'%>
+        </li>
+        <li class="nav-item">
             <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: 'nav-link link-danger'%>
         </li>
+
     <% else %>
         <li class="nav-item">
             <%= link_to "Iniciar Sesión", new_user_session_path, class: 'nav-link'%>
