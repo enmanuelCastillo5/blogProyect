@@ -24,6 +24,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'will_paginate-bootstrap4'
+gem 'friendly_id', '~> 5.4.0'
+
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

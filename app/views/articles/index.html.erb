@@ -4,3 +4,4 @@
 <div class="row">
 <%= render @articles %>
 </div>
+<%= will_paginate @articles, list_classes: %w(pagination justify-content-center) %>

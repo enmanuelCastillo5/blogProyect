@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
     before_action :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy]
 
     def index
-        @articles = Article.all
+        @articles = Article.paginate(page: params[:page], per_page: 8)
     end
     def new
         @article = Article.new
@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
     end
 
     def find_article
-        @article = Article.find(params[:id])
+        @article = Article.friendly.find(params[:id])
     end
 
     def article_params

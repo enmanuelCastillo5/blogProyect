@@ -1,6 +1,6 @@
 <div class="large-container center-block">
     <h1><%= @article.title %></h1>
-    <%= image_tag @article.picture.thumb.url, class: 'figure-img img-fluid rounded'%>
+    <%= image_tag @article.picture.medium.url, class: 'figure-img img-fluid rounded'%>
     <div>
     <p>Escrito por: <strong><%= @article.user.email %></strong></p>
     <p>Creado en: <strong><%= @article.created_at %></strong></p>

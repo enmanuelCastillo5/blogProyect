@@ -1,4 +1,7 @@
 class Article < ApplicationRecord
+    extend FriendlyId
+    friendly_id :title, use: :slugged
+
     mount_uploader :picture, PictureUploader
     has_rich_text :content
     belongs_to :user
